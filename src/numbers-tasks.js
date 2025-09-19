@@ -19,7 +19,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
- return width * height
+ return width * height;
 }
 
 /**
@@ -34,7 +34,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCircleCircumference(radius) {
-  return 2 * Math.PI * radius
+  return 2 * Math.PI * radius;
 }
 
 /**
@@ -50,9 +50,8 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (value1 * value2) / 2
+  return (value1 * value2) / 2;
 }
-
 /**
  * Returns a distance between two points by cartesian coordinates.
  *
@@ -84,7 +83,7 @@ function getDistanceBetweenPoints( x1, y1, x2, y2 ) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot( a, b) {
-  return -b / a
+  return -b / a;
 }
 
 /**
@@ -108,7 +107,7 @@ function getAngleBetweenVectors( x1, y1, x2, y2 ) {
   let scalar = (x1 * y1) + (x2 * y2);
   let modulFirst = Math.hypot(x1 - x2, y1 - y2);
   let modulSecond = Math.sqrt( Math.pow(y1,2) + Math.pow(y2,2));
-  return Math.acos(scalar / (modulFirst *  modulSecond))
+  return Math.acos(scalar / (modulFirst *  modulSecond));
 }
 
 /**
@@ -125,7 +124,7 @@ function getAngleBetweenVectors( x1, y1, x2, y2 ) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  return Number(String(value).substr(-1))
+  return Number(String(value).substr(-1));
 }
 
 
@@ -141,7 +140,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-  return Number(value)
+  return Number(value);
 }
 
 /**
@@ -158,7 +157,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelepipedDiagonal( a, b, c ) {
- return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2))
+ return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(c, 2));
 }
 
 /**
@@ -210,7 +209,7 @@ function isPrime( n ) {
     return false
    } else {
     return true }
-  }
+  };
 
 }
 
@@ -234,7 +233,7 @@ function toNumber( value, def ) {
           typeof(value) === 'number' ? value :
           typeof(value) === 'string' ? +value :
           value === 'test' ? def :
-          new Number(value) 
+          new Number(value) ;
 }
 
 /**
@@ -249,7 +248,7 @@ function toNumber( value, def ) {
  *   0  => 0
  */
 function getCube(/* num */) {
-  return Math.pow(num,3)
+  return Math.pow(num,3);
 }
 
 /**
@@ -292,7 +291,7 @@ function getSumToN(/* n */) {
  for (let i = 0; i <= n; i++){
   res += i;
  }
-return res
+return res;
 }
 
 /**
@@ -370,7 +369,7 @@ function numberToStringInBase( number, base ) {
  * 12345, 2    => '1.23e+4'
  */
 function toExponential( number, fractionDigits ) {
-  return number.toExponential(fractionDigits)
+  return number.toExponential(fractionDigits);
 }
 
 /**
@@ -415,7 +414,7 @@ function toPrecision( number, precision) {
  * Number(-5)    => -5
  */
 function getNumberValue( number) {
-  return +number
+  return +number;
 }
 
 /**
@@ -449,7 +448,7 @@ function isNumber(number) {
  * '5'  => false
  */
 function isInteger( number ) {
- return Number.isInteger(number)
+ return Number.isInteger(number);
 }
 
 /**
@@ -463,7 +462,7 @@ function isInteger( number ) {
  * 'abcdefgh'      => NaN
  */
 function getFloatOnString(/* str */) {
-  return Number.parseFloat(str)
+  return Number.parseFloat(str);
 }
 
 /**
@@ -481,8 +480,8 @@ function getFloatOnString(/* str */) {
  * '10', 8              => 8
  */
 function getIntegerOnString(/* str, base */) {
-  return parseInt(str , base)
-}
+  return parseInt(str , base);
+};
 
 /**
  * Returns whether a number is a safe integer.
@@ -539,8 +538,8 @@ function roundToLargestInteger(number) {
  * -5.5 => -5
  */
 function roundToNearestInteger( number) {
-  return Math.round(number)
-}
+  return Math.round(number);
+};
 
 /**
  * Returns the integer part of a number by removing any fractional digits.
@@ -554,7 +553,7 @@ function roundToNearestInteger( number) {
  * -5.5 => -5
  */
 function getIntegerPartNumber(number) {
-  return +number.toFixed(0)
+  return +number.toFixed(0);
 }
 
 /**
@@ -605,9 +604,9 @@ function getMaxNumber( firstNumber, secondNumber) {
 function getRandomInteger( min, max ) {
  let nums = [];
  for(min; min <= max; min++){
-  nums.push(min)
+  nums.push(min);
  }
- return nums.join(' | ')
+ return nums.join(' | ');
 }
 
 /**
@@ -642,9 +641,9 @@ function getCountOfOddNumbers(number) {
   for (let i = 1; i <= number; i++){
     if (i % 2 !== 0){
       count++
-    }
+    };
   }
-  return count
+  return count;
 }
 
 module.exports = {
